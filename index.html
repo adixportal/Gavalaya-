@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galavaya | Handcrafted Luxury Ethnic Wear</title>
+  <meta charset="UTF-8">
+  <title>Galavaya | Luxury Ethnic Wear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -22,7 +22,7 @@
       color:var(--dark);
     }
 
-    /* NAVBAR */
+    /* NAV */
     nav{
       position:absolute;
       top:0;left:0;width:100%;
@@ -42,10 +42,9 @@
       display:flex;
       gap:24px;
     }
-    nav ul a{
+    nav a{
       color:#fff;
       text-decoration:none;
-      font-size:15px;
     }
 
     /* HERO */
@@ -83,7 +82,6 @@
       margin-bottom:20px;
     }
     .hero-content p{
-      font-size:16px;
       margin-bottom:30px;
       opacity:.95;
     }
@@ -97,11 +95,10 @@
       font-weight:500;
     }
 
-    /* COMMON */
     section{padding:90px 8%}
     .section-title{
       text-align:center;
-      margin-bottom:60px;
+      margin-bottom:50px;
     }
     .section-title h3{
       font-family:'Playfair Display',serif;
@@ -112,18 +109,18 @@
     /* COLLECTIONS */
     .collections{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
       gap:30px;
     }
     .collection{
-      height:340px;
+      height:320px;
       border-radius:20px;
       background-size:cover;
       background-position:center;
       position:relative;
       display:flex;
       align-items:flex-end;
-      padding:25px;
+      padding:20px;
       color:#fff;
     }
     .collection::after{
@@ -137,51 +134,14 @@
       position:relative;
       z-index:2;
       font-family:'Playfair Display',serif;
-      font-size:24px;
     }
 
-    /* PRODUCTS */
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:30px;
-    }
-    .product{
-      background:#fff;
-      border-radius:20px;
-      overflow:hidden;
-      box-shadow:0 10px 25px rgba(0,0,0,.08);
-    }
-    .product img{
-      width:100%;
-      height:300px;
-      object-fit:cover;
-    }
-    .product .info{
-      padding:20px;
-    }
-
-    /* WHY */
-    .why{
-      background:#fff;
-      border-radius:30px;
-      padding:60px;
-    }
-    .why-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:30px;
-      text-align:center;
-    }
-
-    /* FOOTER */
     footer{
       background:#1a0c14;
       color:#fff;
-      padding:50px 8%;
       text-align:center;
+      padding:50px 8%;
     }
-    footer p{opacity:.8}
 
     @media(max-width:768px){
       .hero-content h2{font-size:40px}
@@ -201,18 +161,17 @@
   </ul>
 </nav>
 
-<!-- HERO -->
+<!-- HERO (LOCAL IMAGE — NO ISSUE EVER) -->
 <div class="hero-wrap">
-  <img class="hero-img"
-       src="https://images.unsplash.com/photo-1618354691411-1b1e30b9754d?auto=format&fit=crop&w=1600&q=80"
-       alt="Luxury ethnic wear">
+  <img class="hero-img" src="./images/hero.jpg" alt="Galavaya Luxury Wear">
   <div class="hero-overlay"></div>
+
   <div class="hero-content">
     <div>
       <h2>Luxury, Timeless<br>Elegance</h2>
       <p>
-        Premium hand embroidered silk sarees and traditional
-        kadhai–bunai clothing crafted for those who value heritage.
+        Premium hand embroidered silk sarees and
+        traditional kadhai–bunai ethnic wear.
       </p>
       <a href="shop.html" class="btn">Shop Collection</a>
     </div>
@@ -226,68 +185,18 @@
   </div>
 
   <div class="collections">
-    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1623074176950-6d59e289d57e?auto=format&fit=crop&w=800&q=80');">
+    <div class="collection" style="background-image:url('./images/hero.jpg')">
       <h4>Silk Sarees</h4>
     </div>
-    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80');">
+    <div class="collection" style="background-image:url('./images/hero.jpg')">
       <h4>Kadhai Bunai Wear</h4>
     </div>
-    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1602810319428-019690571b5b?auto=format&fit=crop&w=800&q=80');">
+    <div class="collection" style="background-image:url('./images/hero.jpg')">
       <h4>Bridal Collection</h4>
     </div>
   </div>
 </section>
 
-<!-- FEATURED PRODUCTS -->
-<section>
-  <div class="section-title">
-    <h3>Featured Products</h3>
-  </div>
-
-  <div class="products">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1618221710640-c0eaaa2adb49?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <h4>Hand Embroidered Silk Saree</h4>
-        <p>₹18,500</p>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <h4>Kadhai Bunai Ethnic Wear</h4>
-        <p>₹14,200</p>
-      </div>
-    </div>
-
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1602810319428-019690571b5b?auto=format&fit=crop&w=800&q=80">
-      <div class="info">
-        <h4>Bridal Handloom Saree</h4>
-        <p>₹26,000</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section>
-  <div class="why">
-    <div class="section-title">
-      <h3>Why Galavaya</h3>
-    </div>
-
-    <div class="why-grid">
-      <div>🧵 <br><strong>Handcrafted</strong></div>
-      <div>💎 <br><strong>Premium Fabrics</strong></div>
-      <div>🇮🇳 <br><strong>Made in India</strong></div>
-      <div>✨ <br><strong>Timeless Designs</strong></div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <p>© 2026 Galavaya · Handcrafted in India</p>
 </footer>
