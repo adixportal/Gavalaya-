@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout | Galavaya</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <h1>Galavaya</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+</nav>
+
+<div class="page-title">
+  <h2>Checkout</h2>
+</div>
+
+<section style="padding:40px 8%;display:flex;gap:40px;flex-wrap:wrap;">
+
+  <!-- CUSTOMER FORM -->
+  <form id="orderForm" style="
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    flex:1;min-width:280px;">
+
+    <h3 style="margin-bottom:20px;color:#4b132f;">Customer Details</h3>
+
+    <input type="text" placeholder="Full Name" required
+      style="width:100%;padding:12px;margin-bottom:15px;">
+
+    <input type="text" placeholder="Phone Number" required
+      style="width:100%;padding:12px;margin-bottom:15px;">
+
+    <input type="email" placeholder="Email Address" required
+      style="width:100%;padding:12px;margin-bottom:15px;">
+
+    <textarea placeholder="Full Address" required
+      style="width:100%;padding:12px;height:90px;margin-bottom:15px;"></textarea>
+
+    <input type="text" placeholder="City" required
+      style="width:100%;padding:12px;margin-bottom:15px;">
+
+    <input type="text" placeholder="Pincode" required
+      style="width:100%;padding:12px;margin-bottom:20px;">
+
+    <button type="submit"
+      style="
+      padding:14px 36px;
+      background:#c9a24d;
+      border:none;
+      border-radius:30px;
+      font-weight:500;
+      cursor:pointer;">
+      Place Order
+    </button>
+
+  </form>
+
+  <!-- ORDER SUMMARY -->
+  <div style="
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    flex:1;min-width:280px;">
+
+    <h3 style="margin-bottom:20px;color:#4b132f;">Order Summary</h3>
+    <div id="summaryItems"></div>
+    <h4 id="summaryTotal" style="margin-top:20px;"></h4>
+  </div>
+
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
