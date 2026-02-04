@@ -1,8 +1,13 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galavaya | Handcrafted Luxury Clothing</title>  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">  <style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galavaya | Handcrafted Luxury</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
     :root{
       --primary:#4b132f;
       --gold:#c9a24d;
@@ -10,59 +15,74 @@
       --dark:#1e1e1e;
     }
 
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--dark);}
+    *{margin:0;padding:0;box-sizing:border-box}
 
-    header{
-      height:100vh;
-      background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url('https://images.unsplash.com/photo-1618354691411-1b1e30b9754d');
-      background-size:cover;
-      background-position:center;
-      color:#fff;
-      padding:30px 8%;
-      display:flex;
-      flex-direction:column;
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--light);
+      color:var(--dark);
     }
 
+    /* NAVBAR */
     nav{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      padding:20px 8%;
       display:flex;
       justify-content:space-between;
       align-items:center;
+      z-index:10;
+      color:#fff;
     }
 
     nav h1{
       font-family:'Playfair Display',serif;
-      font-size:34px;
-      letter-spacing:1px;
+      font-size:32px;
     }
 
     nav ul{
       list-style:none;
       display:flex;
-      gap:28px;
+      gap:25px;
     }
 
     nav ul li a{
-      text-decoration:none;
       color:#fff;
+      text-decoration:none;
       font-size:15px;
     }
 
+    /* HERO */
+    header{
+      min-height:100vh;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url('https://images.unsplash.com/photo-1618354691411-1b1e30b9754d?auto=format&fit=crop&w=1400&q=80');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:0 8%;
+      color:#fff;
+    }
+
     .hero{
-      margin:auto 0;
       max-width:650px;
     }
 
     .hero h2{
       font-family:'Playfair Display',serif;
       font-size:56px;
-      margin-bottom:15px;
+      line-height:1.2;
+      margin-bottom:20px;
     }
 
     .hero p{
       font-size:16px;
       margin-bottom:30px;
-      opacity:.9;
+      opacity:.95;
     }
 
     .btn{
@@ -75,39 +95,46 @@
       font-weight:500;
     }
 
-    section{padding:90px 8%;}
+    section{
+      padding:90px 8%;
+    }
 
-    .section-title{text-align:center;margin-bottom:60px;}
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
     .section-title h3{
       font-family:'Playfair Display',serif;
       font-size:38px;
       color:var(--primary);
     }
 
+    /* COLLECTIONS */
     .collections{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:30px;
     }
 
     .collection{
-      height:360px;
-      border-radius:18px;
-      position:relative;
-      color:#fff;
-      padding:25px;
-      display:flex;
-      align-items:flex-end;
+      height:340px;
+      border-radius:20px;
       background-size:cover;
       background-position:center;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      padding:25px;
+      color:#fff;
     }
 
     .collection::after{
-      content:'';
+      content:"";
       position:absolute;
       inset:0;
       background:linear-gradient(to top,rgba(0,0,0,.6),transparent);
-      border-radius:18px;
+      border-radius:20px;
     }
 
     .collection h4{
@@ -117,28 +144,11 @@
       z-index:2;
     }
 
-    .products{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:35px;
-    }
-
-    .product{
-      background:#fff;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:0 12px 30px rgba(0,0,0,.08);
-    }
-
-    .product img{width:100%;height:280px;object-fit:cover;}
-    .product div{padding:20px;}
-    .product h5{font-size:16px;margin-bottom:6px;}
-    .product span{font-weight:500;color:var(--primary);}
-
+    /* ABOUT */
     .about{
       background:#fff;
-      border-radius:30px;
       padding:60px;
+      border-radius:30px;
       max-width:1000px;
       margin:auto;
       text-align:center;
@@ -147,78 +157,84 @@
     .about h3{
       font-family:'Playfair Display',serif;
       font-size:36px;
-      margin-bottom:20px;
       color:var(--primary);
+      margin-bottom:20px;
     }
 
     footer{
       background:#1a0c14;
       color:#fff;
-      padding:60px 8%;
+      padding:50px 8%;
       text-align:center;
     }
 
-    footer p{font-size:14px;opacity:.8;}
+    footer p{
+      font-size:14px;
+      opacity:.8;
+    }
 
     @media(max-width:768px){
-      .hero h2{font-size:40px;}
-      nav ul{display:none;}
+      .hero h2{font-size:40px}
+      nav ul{display:none}
     }
-  </style></head>
-<body><header>
-  <nav>
-    <h1>Galavaya</h1>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">Collections</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>  <div class="hero">
-    <h2>Handcrafted Luxury,
-      Timeless Elegance</h2>
-    <p>Premium hand embroidered silk sarees and traditional kadhai–bunai clothing, crafted for those who value heritage and luxury.</p>
-    <a href="#" class="btn">Shop Collection</a>
+  </style>
+</head>
+<body>
+
+<nav>
+  <h1>Galavaya</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+</nav>
+
+<header>
+  <div class="hero">
+    <h2>Luxury, Timeless<br>Elegance</h2>
+    <p>
+      Premium hand embroidered silk sarees and traditional kadhai-bunai clothing,
+      crafted for those who value heritage and luxury.
+    </p>
+    <a href="shop.html" class="btn">Shop Collection</a>
   </div>
-</header><section>
+</header>
+
+<section>
   <div class="section-title">
     <h3>Signature Collections</h3>
-  </div>  <div class="collections">
-    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1623074176950-6d59e289d57e');">
+  </div>
+
+  <div class="collections">
+    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1623074176950-6d59e289d57e?auto=format&fit=crop&w=800&q=80');">
       <h4>Silk Sarees</h4>
     </div>
-    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1583394838336-acd977736f90');">
+
+    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80');">
       <h4>Kadhai Bunai Wear</h4>
     </div>
-    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1602810319428-019690571b5b');">
+
+    <div class="collection" style="background-image:url('https://images.unsplash.com/photo-1602810319428-019690571b5b?auto=format&fit=crop&w=800&q=80');">
       <h4>Bridal Collection</h4>
     </div>
   </div>
-</section><section>
-  <div class="section-title">
-    <h3>Trending Products</h3>
-  </div>  <div class="products">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1618221710640-c0eaaa2adb49">
-      <div>
-        <h5>Hand Embroidered Silk Saree</h5>
-        <span>₹18,500</span>
-      </div>
-    </div><div class="product">
-  <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1">
-  <div>
-    <h5>Kadhai Bunai Ethnic Wear</h5>
-    <span>₹14,200</span>
-  </div>
-</div>
+</section>
 
-  </div>
-</section><section>
+<section>
   <div class="about">
     <h3>The Galavaya Story</h3>
-    <p>Galavaya brings together generations of Indian craftsmanship. Every garment is thoughtfully designed, carefully embroidered and made using premium fabrics to celebrate timeless elegance.</p>
+    <p>
+      Galavaya celebrates Indian craftsmanship and heritage.
+      Every garment is handcrafted with premium fabrics and intricate detailing,
+      creating timeless elegance for every occasion.
+    </p>
   </div>
-</section><footer>
-  <p>© 2026 Galavaya. Crafted in India.</p>
-</footer></body>
+</section>
+
+<footer>
+  <p>© 2026 Galavaya · Handcrafted in India</p>
+</footer>
+
+</body>
 </html>
